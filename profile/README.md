@@ -60,10 +60,11 @@ types.
 - Exactly one seam between SDK types and UI types
   (`src/lib/pet-sdk.ts`), enforced by review
 
-![Organization architecture — pet-platform owns the contract, tiny-tamagotchi-sanctuary consumes it via the typed SDK](./assets/architecture.png)
+![Organization architecture — pet-platform owns the contract, tiny-tamagotchi-sanctuary consumes it via the typed SDK](./assets/architecture.svg)
 
 <sub>Source: [`assets/architecture.drawio`](./assets/architecture.drawio) (editable in
-[app.diagrams.net](https://app.diagrams.net) / draw.io desktop).</sub>
+[app.diagrams.net](https://app.diagrams.net) / draw.io desktop).
+A 2× PNG export is also committed at [`assets/architecture.png`](./assets/architecture.png).</sub>
 
 ## How the spec drives the code
 
