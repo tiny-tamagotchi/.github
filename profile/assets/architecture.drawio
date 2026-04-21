@@ -1,134 +1,131 @@
-<mxfile host="app.diagrams.net" modified="2026-04-21T22:00:00.000Z" agent="devin" version="29.7.8">
+<mxfile host="app.diagrams.net" modified="2026-04-21T22:20:00.000Z" agent="devin" version="29.7.8">
   <diagram name="architecture" id="tiny-tamagotchi-arch">
-    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+    <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
 
-        <mxCell id="title" value="Tiny Tamagotchi — organization architecture" style="text;html=1;align=center;verticalAlign=middle;fontSize=18;fontStyle=1;fontColor=#233044;" vertex="1" parent="1">
-          <mxGeometry x="40" y="10" width="1320" height="30" as="geometry"/>
+        <mxCell id="title" value="Tiny Tamagotchi — organization architecture"
+          style="text;html=1;align=center;verticalAlign=middle;fontSize=24;fontStyle=1;fontColor=#233044;"
+          vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="1520" height="40" as="geometry"/>
         </mxCell>
 
-        <mxCell id="platform_zone" value="pet-platform&#10;(owns the contract · engineering-owned)"
-          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fe;strokeColor=#4a7fb5;strokeWidth=2;verticalAlign=top;fontStyle=1;fontSize=14;fontColor=#1a3a5c;align=left;spacingLeft=16;spacingTop=10;"
+        <mxCell id="platform_zone" value="pet-platform&#10;owns the contract  ·  engineering-owned"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fe;strokeColor=#4a7fb5;strokeWidth=3;verticalAlign=top;fontStyle=1;fontSize=20;fontColor=#1a3a5c;align=left;spacingLeft=20;spacingTop=14;"
           vertex="1" parent="1">
-          <mxGeometry x="40" y="60" width="1320" height="320" as="geometry"/>
+          <mxGeometry x="40" y="80" width="1520" height="360" as="geometry"/>
         </mxCell>
 
-        <mxCell id="specs" value="specs/ · docs/&#10;&#10;mission · roadmap · tech-stack&#10;constitution · ADRs&#10;features/pet-core/{feature-plan,&#10;requirements, validation}.md"
-          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#4a7fb5;fontSize=11;align=left;spacingLeft=10;spacingTop=6;verticalAlign=top;fontStyle=0;"
+        <mxCell id="specs" value="specs/ · docs/&#10;&#10;mission · roadmap · tech-stack&#10;constitution · ADRs&#10;&#10;features/pet-core/&#10;feature-plan · requirements · validation"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#4a7fb5;strokeWidth=2;fontSize=16;align=left;spacingLeft=14;spacingTop=10;verticalAlign=top;fontStyle=0;"
           vertex="1" parent="1">
-          <mxGeometry x="80" y="150" width="280" height="200" as="geometry"/>
+          <mxGeometry x="80" y="180" width="340" height="220" as="geometry"/>
         </mxCell>
 
-        <mxCell id="contracts" value="@tiny-tamagotchi-mg/contracts&#10;&#10;Zod schemas (source of truth)&#10;DTOs · commands · events · errors&#10;port interfaces&#10;&#10;→ @tiny-tamagotchi-mg/openapi"
-          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#4a7fb5;fontSize=11;align=left;spacingLeft=10;spacingTop=6;verticalAlign=top;fontStyle=0;"
+        <mxCell id="contracts" value="@tiny-tamagotchi-mg/contracts&#10;&#10;Zod schemas&#10;(source of truth)&#10;&#10;DTOs · commands · events · errors&#10;port interfaces"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#4a7fb5;strokeWidth=2;fontSize=16;align=left;spacingLeft=14;spacingTop=10;verticalAlign=top;fontStyle=0;"
           vertex="1" parent="1">
-          <mxGeometry x="400" y="150" width="280" height="200" as="geometry"/>
+          <mxGeometry x="460" y="180" width="340" height="220" as="geometry"/>
         </mxCell>
 
-        <mxCell id="petapi" value="services/pet-api (NestJS)&#10;&#10;thin orchestrator over&#10;pure domain reducers&#10;&#10;adapters:&#10;  in-memory · TypeORM + Postgres"
-          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#4a7fb5;fontSize=11;align=left;spacingLeft=10;spacingTop=6;verticalAlign=top;fontStyle=0;"
+        <mxCell id="petapi" value="services/pet-api&#10;(NestJS)&#10;&#10;thin orchestrator over&#10;pure domain reducers&#10;&#10;adapters: in-memory · TypeORM + Postgres"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#4a7fb5;strokeWidth=2;fontSize=16;align=left;spacingLeft=14;spacingTop=10;verticalAlign=top;fontStyle=0;"
           vertex="1" parent="1">
-          <mxGeometry x="720" y="150" width="280" height="200" as="geometry"/>
+          <mxGeometry x="840" y="180" width="340" height="220" as="geometry"/>
         </mxCell>
 
         <mxCell id="sdk" value="@tiny-tamagotchi-mg/sdk&#10;&#10;typed client&#10;generated from contracts&#10;&#10;PET_CONTRACT_VERSION&#10;SdkHttpError"
-          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbe8f6;strokeColor=#1a3a5c;strokeWidth=2;fontSize=11;align=left;spacingLeft=10;spacingTop=6;verticalAlign=top;fontStyle=1;"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbe8f6;strokeColor=#1a3a5c;strokeWidth=3;fontSize=16;align=left;spacingLeft=14;spacingTop=10;verticalAlign=top;fontStyle=1;"
           vertex="1" parent="1">
-          <mxGeometry x="1040" y="150" width="280" height="200" as="geometry"/>
+          <mxGeometry x="1220" y="180" width="300" height="220" as="geometry"/>
         </mxCell>
 
-        <mxCell id="seam_label" value="typed SDK (CodeArtifact)  ·  OpenAPI  ·  versioned contract"
-          style="text;html=1;align=center;verticalAlign=middle;fontSize=12;fontStyle=2;fontColor=#2e7d32;"
+        <mxCell id="sanctuary_zone" value="tiny-tamagotchi-sanctuary&#10;consumes the contract  ·  Lovable-managed frontend"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3e8fd;strokeColor=#7d4aa5;strokeWidth=3;verticalAlign=top;fontStyle=1;fontSize=20;fontColor=#4a1a73;align=left;spacingLeft=20;spacingTop=14;"
           vertex="1" parent="1">
-          <mxGeometry x="40" y="400" width="1320" height="24" as="geometry"/>
+          <mxGeometry x="40" y="510" width="1520" height="360" as="geometry"/>
         </mxCell>
 
-        <mxCell id="sanctuary_zone" value="tiny-tamagotchi-sanctuary&#10;(consumes the contract · Lovable-managed frontend)"
-          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3e8fd;strokeColor=#7d4aa5;strokeWidth=2;verticalAlign=top;fontStyle=1;fontSize=14;fontColor=#4a1a73;align=left;spacingLeft=16;spacingTop=10;"
+        <mxCell id="seam" value="src/lib/pet-sdk.ts&#10;&#10;the single SDK ↔ UI seam&#10;re-exports SDK types&#10;toUiPet() · narrowSdkError()&#10;&#10;FRONTEND_EXPECTED_&#10;CONTRACT_VERSION gate"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8dbf6;strokeColor=#4a1a73;strokeWidth=3;fontSize=16;align=left;spacingLeft=14;spacingTop=10;verticalAlign=top;fontStyle=1;"
           vertex="1" parent="1">
-          <mxGeometry x="40" y="440" width="1320" height="320" as="geometry"/>
+          <mxGeometry x="80" y="610" width="340" height="220" as="geometry"/>
         </mxCell>
 
-        <mxCell id="seam" value="src/lib/pet-sdk.ts&#10;&#10;single SDK ↔ UI seam&#10;re-exports SDK types&#10;toUiPet() · narrowSdkError()&#10;&#10;FRONTEND_EXPECTED_&#10;CONTRACT_VERSION gate"
-          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8dbf6;strokeColor=#4a1a73;strokeWidth=2;fontSize=11;align=left;spacingLeft=10;spacingTop=6;verticalAlign=top;fontStyle=1;"
+        <mxCell id="hooks" value="hooks/use-pet.ts&#10;&#10;the only place that&#10;calls client.pets.*&#10;&#10;components MUST NOT&#10;import the SDK or call fetch"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#7d4aa5;strokeWidth=2;fontSize=16;align=left;spacingLeft=14;spacingTop=10;verticalAlign=top;fontStyle=0;"
           vertex="1" parent="1">
-          <mxGeometry x="80" y="530" width="280" height="200" as="geometry"/>
+          <mxGeometry x="460" y="610" width="340" height="220" as="geometry"/>
         </mxCell>
 
-        <mxCell id="hooks" value="hooks / use-pet.ts&#10;&#10;only place that calls&#10;client.pets.*&#10;&#10;components MUST NOT&#10;import SDK or call fetch"
-          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#7d4aa5;fontSize=11;align=left;spacingLeft=10;spacingTop=6;verticalAlign=top;fontStyle=0;"
+        <mxCell id="ui" value="UI components&#10;&#10;React 19&#10;TanStack Start / Router&#10;Tailwind v4 + shadcn/ui&#10;Radix primitives"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#7d4aa5;strokeWidth=2;fontSize=16;align=left;spacingLeft=14;spacingTop=10;verticalAlign=top;fontStyle=0;"
           vertex="1" parent="1">
-          <mxGeometry x="400" y="530" width="280" height="200" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="ui" value="UI components&#10;&#10;React 19 + TanStack&#10;Start / Router&#10;Tailwind v4 + shadcn/ui&#10;Radix primitives"
-          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#7d4aa5;fontSize=11;align=left;spacingLeft=10;spacingTop=6;verticalAlign=top;fontStyle=0;"
-          vertex="1" parent="1">
-          <mxGeometry x="720" y="530" width="280" height="200" as="geometry"/>
+          <mxGeometry x="840" y="610" width="340" height="220" as="geometry"/>
         </mxCell>
 
         <mxCell id="deploy" value="Cloudflare Workers&#10;&#10;Vite build&#10;@cloudflare/vite-plugin&#10;wrangler.jsonc"
-          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#7d4aa5;fontSize=11;align=left;spacingLeft=10;spacingTop=6;verticalAlign=top;fontStyle=0;"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#7d4aa5;strokeWidth=2;fontSize=16;align=left;spacingLeft=14;spacingTop=10;verticalAlign=top;fontStyle=0;"
           vertex="1" parent="1">
-          <mxGeometry x="1040" y="530" width="280" height="200" as="geometry"/>
+          <mxGeometry x="1220" y="610" width="300" height="220" as="geometry"/>
         </mxCell>
 
-        <mxCell id="e_specs_contracts" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=20;endArrow=classic;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#4a7fb5;"
+        <mxCell id="e_specs_contracts" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=20;endArrow=classic;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#4a7fb5;strokeWidth=2;"
           edge="1" parent="1" source="specs" target="contracts">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
 
-        <mxCell id="e_contracts_petapi" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=20;endArrow=classic;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#4a7fb5;"
+        <mxCell id="e_contracts_petapi" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=20;endArrow=classic;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#4a7fb5;strokeWidth=2;"
           edge="1" parent="1" source="contracts" target="petapi">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
 
-        <mxCell id="e_contracts_sdk" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=20;endArrow=classic;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#4a7fb5;dashed=1;"
-          edge="1" parent="1" source="contracts" target="sdk">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="540" y="370"/>
-              <mxPoint x="1180" y="370"/>
-            </Array>
-          </mxGeometry>
-        </mxCell>
-
-        <mxCell id="e_petapi_sdk" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=20;endArrow=classic;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#4a7fb5;dashed=1;"
+        <mxCell id="e_petapi_sdk" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=20;endArrow=classic;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#4a7fb5;strokeWidth=2;dashed=1;"
           edge="1" parent="1" source="petapi" target="sdk">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
 
-        <mxCell id="e_seam_hooks" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=20;endArrow=classic;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#7d4aa5;"
-          edge="1" parent="1" source="seam" target="hooks">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="e_hooks_ui" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=20;endArrow=classic;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#7d4aa5;"
-          edge="1" parent="1" source="hooks" target="ui">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="e_ui_deploy" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=20;endArrow=classic;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#7d4aa5;"
-          edge="1" parent="1" source="ui" target="deploy">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="e_seam_main" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=20;endArrow=classic;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#2e7d32;strokeWidth=3;"
-          edge="1" parent="1" source="sdk" target="seam">
+        <mxCell id="e_contracts_sdk" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=20;endArrow=classic;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#4a7fb5;strokeWidth=2;dashed=1;"
+          edge="1" parent="1" source="contracts" target="sdk">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1180" y="400"/>
-              <mxPoint x="220" y="400"/>
+              <mxPoint x="630" y="430"/>
+              <mxPoint x="1370" y="430"/>
             </Array>
           </mxGeometry>
         </mxCell>
 
-        <mxCell id="legend" value="Solid blue: spec → contract → service flow    ·    Dashed blue: generated from contracts    ·    Green: cross-repo contract seam    ·    Solid purple: frontend data path"
-          style="text;html=1;align=center;verticalAlign=middle;fontSize=10;fontColor=#555555;fontStyle=2;"
+        <mxCell id="e_seam_hooks" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=20;endArrow=classic;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#7d4aa5;strokeWidth=2;"
+          edge="1" parent="1" source="seam" target="hooks">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_hooks_ui" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=20;endArrow=classic;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#7d4aa5;strokeWidth=2;"
+          edge="1" parent="1" source="hooks" target="ui">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_ui_deploy" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=20;endArrow=classic;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#7d4aa5;strokeWidth=2;"
+          edge="1" parent="1" source="ui" target="deploy">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_seam_main" value="typed SDK (CodeArtifact)&#10;OpenAPI&#10;versioned contract"
+          style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=20;endArrow=classic;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#2e7d32;strokeWidth=4;fontSize=16;fontColor=#2e7d32;fontStyle=1;labelBackgroundColor=#ffffff;"
+          edge="1" parent="1" source="sdk" target="seam">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1370" y="470"/>
+              <mxPoint x="250" y="470"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="legend" value="Solid blue: spec → contract → service  ·  Dashed blue: generated from contracts  ·  Green: cross-repo contract seam  ·  Solid purple: frontend data path"
+          style="text;html=1;align=center;verticalAlign=middle;fontSize=14;fontColor=#555555;fontStyle=2;"
           vertex="1" parent="1">
-          <mxGeometry x="40" y="780" width="1320" height="20" as="geometry"/>
+          <mxGeometry x="40" y="890" width="1520" height="24" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
